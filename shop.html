@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="https://use.fontawesome.com/c9fcc49bd3.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Z for Zoo</title>
+</head>
+<body>
+    
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+            <img src="./images/logo.svg" alt="logo">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">მთავარი</a></li>
+                <li class="dropdown">
+                    <a href="shop.html">მაღაზია</a>
+                    <!-- <a href="javascript:void(0)" class="dropbtn">მაღაზია</a> -->
+                    <!-- <div class="dropdown-content">
+                        <a href="#">ძაღლი</a>
+                        <a href="#">კატა</a>
+                        <a href="#">მღრღნელი</a>
+                        <a href="#">ფრინველი</a>
+                    </div> -->
+                </li>
+                <li><a href="blogPage.html">ბლოგი</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <button class="nav-btn"><i class="fa fa-shopping-bag"></i></button>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="nav-btn"><i class="fa fa-user"></i></button>
+        </div>
+
+
+        <!-- sign in -->
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOcYCEYdenXNoALGhgjggTBTAOJm1_MTpLceg1e_OJnUzYGOlq" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container">
+                    <label for="uname"><b>მომხმარებელი</b></label>
+                    <input type="text" placeholder="შეიყვანეთ მომხმარებელი" name="uname" required>
+                
+                    <label for="psw"><b>პაროლი</b></label>
+                    <input type="password" placeholder="შეიყვანეთ პაროლი" name="psw" required>
+                        
+                    <button class="login-btn" type="submit">შესვლა</button>
+                    <button class="signup-btn" type="submit" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">რეგისტრაცია</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> დამახსოვრება
+                    </label>
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">გაუქმება</button>
+                <span class="psw">დაგავიწყდათ <a href="#">პაროლი?</a></span>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- signUp -->
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1>რეგისტრაცია</h1>
+                    <p>შეავსეთ ყველა ველი</p>
+                    <hr>
+
+                    <label for="name"><b>სახელი</b></label>
+                    <input type="text" placeholder="შეიყვანეთ სახელი" name="name" required>
+
+                    <label for="surname"><b>გვარი</b></label>
+                    <input type="text" placeholder="შეიყვანეთ გვარი" name="surname" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="შეიყვანეთ მაილი" name="email" required>
+            
+                    <label for="psw"><b>პაროლი</b></label>
+                    <input type="password" placeholder="შეიყვანეთ პაროლი" name="psw" required>
+            
+                    <label for="psw-repeat"><b>გაიმეორეთ პაროლი</b></label>
+                    <input type="password" placeholder="გაიმეორეთ პაროლი" name="psw-repeat" required>
+                    
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> დამახსოვრება
+                    </label>
+            
+                    <p>მომხმარებლის შექმნით თქვენ ეთანხმებით <a href="#" style="color:dodgerblue">ჩვენს წესებსა და პირობებს</a>.</p>
+            
+                    <div class="clearfix">
+                    <button type="submit" class="signup-btn">რეგისტრაცია</button>
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">გაუქმება</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    </nav>
+
+    <div class="products-section">
+            
+
+        <div class="product-row">
+            <div class="product-container">
+                <img src="./images/toy.jpg" alt="Toy" style="width:100%;">
+                <div class="top-left">15 ლარი</div>
+                <div class="bottom-left">წრიპინა სათამაშო</div>
+                <div class="top-right"><i class="fa fa-heart"></i></div>
+                <div class="bottom-right"><i class="fa fa-shopping-bag"></i></div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <button class="open-button" onclick="openForm()">ონლაინ დახმარება</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>მიმოწერა</h1>
+
+            <label for="msg"><b>შეტყობინება</b></label>
+            <textarea placeholder="მოგვწერეთ, ჩვენ მალე გიპასუხებთ" name="msg" required></textarea>
+
+            <button type="submit" class="btn">გაგზავნა</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">დახურვა</button>
+        </form>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
